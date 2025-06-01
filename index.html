@@ -21,15 +21,20 @@
 
         #socials {
             margin: 20px 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
         }
 
         .social-button {
             display: inline-block;
-            margin: 10px;
             padding: 10px 20px;
             text-decoration: none;
             color: white;
             border-radius: 5px;
+            min-width: 120px;
+            box-sizing: border-box;
         }
 
         .youtube { background: #FF0000; }
@@ -39,15 +44,31 @@
 
         #latest-video {
             margin: 20px;
+            padding: 0 10px;
+        }
+
+        iframe {
+            width: 100%;
+            max-width: 560px;
+            height: auto;
+            aspect-ratio: 16 / 9;
         }
 
         footer {
             background: #333;
             color: white;
             padding: 10px;
-            position: absolute;
-            bottom: 0;
             width: 100%;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 1.5em;
+            }
+            .social-button {
+                padding: 10px;
+                font-size: 0.9em;
+            }
         }
     </style>
 </head>
@@ -66,7 +87,7 @@
     
     <section id="latest-video">
         <h2>Mijn nieuwste video</h2>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
     </section>
     
     <footer>
